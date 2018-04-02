@@ -1,6 +1,8 @@
 var axios = require('axios');
 
-var isFn = x => Object.prototype.toString.call(x) === '[object Function]';
+var isFn = function(x) {
+  return Object.prototype.toString.call(x) === '[object Function]';
+}
 
 var log = function(m) {
   console.log(m);
@@ -22,7 +24,7 @@ var GetDeleteConfig = function(queryParams) {
 
 }
 
-var request = (route, success, data, err, type)  => {
+var request = function(route, success, data, err, type) {
 
   if (success != null && !isFn(success)) {
     throw new TypeError('Success callback (argument 2) must be a function.');
@@ -51,10 +53,10 @@ var request = (route, success, data, err, type)  => {
   var requestData = getDelete ? new GetDeleteConfig(data) : data;
 
   axios[type](route, requestData)
-    .then( res => {
+    .then(function(res) {
       cb(res);
     })
-    .catch( err => {
+    .catch(function(err) {
       errCb(err);
     });
 
@@ -64,7 +66,7 @@ var request = (route, success, data, err, type)  => {
 exports.install = function(Vue, options) {
 
   if (options != null) {
-    Object.keys(options).forEach(k => {
+    Object.keys(options).forEach(function(k) {
       opts[k] = options[k];
     });
   }
