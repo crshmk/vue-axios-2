@@ -90,7 +90,7 @@ created: function() {
 ```
 
 ### Sending Data
-The third parameter passes an object to be parsed as a query string for GET and DELETE requests, and an object to be parsed as the payload for POST and PUT requests.
+The third parameter passes an object to be parsed as a query string for GET and DELETE requests, or an object to be parsed as the payload for POST and PUT requests.
 
 To add query parameters to POST and PUT requests, put them in the route string.
 ```javascript
