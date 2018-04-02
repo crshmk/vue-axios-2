@@ -14,5 +14,9 @@
   "dependencies": {
     "axios": "^0.18.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/crshmk/vue-axios-2"
+  }
 }
