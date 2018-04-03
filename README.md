@@ -80,7 +80,7 @@ data: function() {
   };
 },
 methods: {
-  setResponse: function(res) {
+  setChairs: function(res) {
     this.chairs = res.data;
   }
 },

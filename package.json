@@ -1,7 +1,7 @@
 {
   "name": "vue-axios-2",
-  "version": "1.0.2",
-  "description": "A Vue plugin that wraps axios to handle http requests in components",
+  "version": "1.0.4",
+  "description": "One-liner http requests",
   "main": "index.js",
   "keywords": [
     "vue",
